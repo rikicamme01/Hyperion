@@ -21,7 +21,7 @@
          <children>
             <ImageView fitHeight="110.0" fitWidth="213.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@vecteezy_twitter-post-template-editable-vector_%20copia.jpg" />
+                  <Image url="@template_tweet.png" />
                </image>
             </ImageView>
             <Pane layoutX="13.0" layoutY="2.0" prefHeight="33.0" prefWidth="97.0" style="-fx-background-color: #16202a #16202a;">
