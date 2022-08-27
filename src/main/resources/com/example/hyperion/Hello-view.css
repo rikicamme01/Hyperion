@@ -1,0 +1,94 @@
+#VBox{
+    -fx-background-color: #16202a;
+    -fx-border-width: 0 7 0 0;
+    -fx-border-color: linear-gradient(to right, #8899a6, #ffffff);
+
+}
+
+#btNuovaRicerca {
+    -fx-background-color:  #16202a;
+    -fx-text-fill: #8899a6 ;
+    /*DA SCEGLIERE IL FONT*/
+
+}
+
+#btNuovaRicerca:hover {                 /*font "grassetto"*/
+    -fx-background-color: #1B75BB;
+    -fx-text-fill: #ffffff;
+
+    -fx-border-color: #55ACEE;
+    -fx-border-width: 0 0 0 5;
+}
+
+#btNuovaRicerca:pressed {       /*premuta = azzuro più chiaro sfumato e stesse impostazioni font di hover*/
+    -fx-background-color: #55ACEE ;
+    -fx-text-fill: #ffffff;
+
+}
+
+
+
+#btTwitterAccount {
+    -fx-background-color:  #16202a;
+    -fx-text-fill: #8899a6;
+}
+
+#btTwitterAccount:hover {
+    -fx-background-color: #1B75BB;
+    -fx-text-fill: #ffffff;
+
+    -fx-border-color: #55ACEE;
+    -fx-border-width: 0 0 0 5;
+}
+
+#btTwitterAccount:pressed {
+    -fx-background-color: #55ACEE;
+    -fx-text-fill: #ffffff;
+}
+
+
+
+#btButton {
+    -fx-background-color:  #16202a;
+    -fx-text-fill: #8899a6;
+}
+
+#btButton:hover {
+    -fx-background-color: #1B75BB;
+    -fx-text-fill: #ffffff;
+
+    -fx-border-color: #55ACEE;
+    -fx-border-width: 0 0 0 5;
+}
+
+#btButton:pressed {
+    -fx-background-color: #55ACEE;
+    -fx-text-fill: #ffffff;
+}
+
+
+
+#btInfo {
+    -fx-background-color: #16202a ;
+    -fx-background-radius: 30 ;
+
+    -fx-border-color: #ff0000 ;
+    -fx-border-radius: 30 ;
+    -fx-text-fill: #ff0000 ;
+
+}
+
+#btInfo:hover {
+    -fx-background-color:  #ff0000;
+    -fx-background-radius: 30;
+    -fx-text-fill: #16202a;
+
+}
+
+#btInfo:pressed {
+    -fx-background-color:  #16202a;
+    -fx-background-radius: 30;
+    -fx-text-fill: #ff0000;
+
+
+}
