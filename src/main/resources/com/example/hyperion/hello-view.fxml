@@ -25,11 +25,21 @@
             </ImageView>
          </center>
          <top>
-            <AnchorPane prefHeight="37.0" prefWidth="0.0" style="-fx-background-color: #1B75BB#1B75BB; -fx-border-color: #000000;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="40.0" prefWidth="900.0" style="-fx-background-color: #1B75BB#1B75BB; -fx-border-color: #000000;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="19.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="570.0" AnchorPane.topAnchor="9.0">
+                  <ImageView fitHeight="19.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="9.0">
                      <image>
                         <Image url="@Hyperion_Logo_NO.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ImTwitter" fitHeight="35.0" fitWidth="31.0" layoutX="814.0" onMouseClicked="#collegamentoTwitter" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="4.0">
+                     <image>
+                        <Image url="@icons8-twitter-cerchiato-60.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="btInfo" fitHeight="26.0" fitWidth="29.0" layoutX="850.0" layoutY="7.0" onMouseClicked="#info" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="7.0">
+                     <image>
+                        <Image url="@icons8-informazioni-50.png" />
                      </image>
                   </ImageView>
                </children>
@@ -38,26 +48,18 @@
          <left>
             <VBox id="VBox" prefHeight="620.0" prefWidth="200.0" stylesheets="@Hello-view.css" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="btNuovaRicerca" minHeight="45.0" mnemonicParsing="false" onAction="#nuovaRicerca" prefHeight="55.0" prefWidth="200.0" stylesheets="@Hello-view.css" text="NUOVA RICERCA">
+                  <Button fx:id="btNuovaRicerca" minHeight="45.0" mnemonicParsing="false" onAction="#nuovaRicerca" prefHeight="55.0" prefWidth="200.0" stylesheets="@Hello-view.css" text="Nuova Ricerca">
                      <font>
-                        <Font name="Tiro Tamil" size="15.0" />
+                        <Font name="Tiro Tamil" size="16.0" />
                      </font></Button>
-                  <Button fx:id="btTwitterAccount" minHeight="45.0" mnemonicParsing="false" onAction="#twitterAccount" prefHeight="55.0" prefWidth="200.0" stylesheets="@Hello-view.css" text="TWITTER ACCOUNT">
+                  <Button fx:id="btTwitterAccount" minHeight="45.0" mnemonicParsing="false" onAction="#twitterAccount" prefHeight="55.0" prefWidth="200.0" stylesheets="@Hello-view.css" text="Twitter Account">
                      <font>
-                        <Font name="Tiro Tamil" size="15.0" />
+                        <Font name="Tiro Tamil" size="16.0" />
                      </font></Button>
-                  <Button fx:id="btButton" minHeight="45.0" mnemonicParsing="false" onAction="#button" prefHeight="55.0" prefWidth="200.0" stylesheets="@Hello-view.css" text="BUTTON">
+                  <Button fx:id="btButton" minHeight="45.0" mnemonicParsing="false" onAction="#button" prefHeight="55.0" prefWidth="200.0" stylesheets="@Hello-view.css" text="Button">
                      <font>
-                        <Font name="Tiro Tamil" size="15.0" />
+                        <Font name="Tiro Tamil" size="16.0" />
                      </font></Button>
-                  <Button fx:id="btInfo" minHeight="40.0" mnemonicParsing="false" onAction="#info" prefHeight="40.0" prefWidth="62.0" stylesheets="@Hello-view.css" text="INFO">
-                     <VBox.margin>
-                        <Insets left="70.0" right="70.0" top="270.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font name="Tiro Tamil" size="12.0" />
-                     </font>
-                  </Button>
                </children>
             </VBox>
          </left>

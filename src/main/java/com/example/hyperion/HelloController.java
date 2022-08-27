@@ -6,11 +6,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-
 import java.io.IOException;
+import java.awt.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class HelloController {
     private Node view1;
@@ -33,19 +38,18 @@ public class HelloController {
 
     }
 
-
     @FXML
     private BorderPane borderPane;
 
     @FXML
     private Button btButton;
-
     @FXML
-    private Button btInfo;
+    private ImageView btInfo;
+    @FXML
+    private ImageView ImTwitter;
 
     @FXML
     private Button btNuovaRicerca;
-
     @FXML
     private Button btTwitterAccount;
 
@@ -55,7 +59,6 @@ public class HelloController {
         borderPane.setCenter(view1);
 
     }
-
     @FXML
     void twitterAccount(ActionEvent event) {
 
@@ -66,11 +69,12 @@ public class HelloController {
 
         borderPane.setCenter(view3);
     }
-
     @FXML
-    void info(ActionEvent event) {
+    void info(MouseEvent event) {
         borderPane.setCenter(view4);
     }
 
-
+    public void collegamentoTwitter(MouseEvent event) throws URISyntaxException, IOException {
+        Desktop.getDesktop().browse(new URI("https://twitter.com/home?lang=it"));
+    }
 }
