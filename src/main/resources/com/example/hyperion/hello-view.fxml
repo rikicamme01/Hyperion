@@ -50,15 +50,15 @@
                <children>
                   <Button fx:id="btNuovaRicerca" minHeight="45.0" mnemonicParsing="false" onAction="#nuovaRicerca" prefHeight="55.0" prefWidth="200.0" stylesheets="@Hello-view.css" text="Nuova Ricerca">
                      <font>
-                        <Font name="Tiro Tamil" size="16.0" />
+                        <Font name="Verdana" size="16.0" />
                      </font></Button>
                   <Button fx:id="btTwitterAccount" minHeight="45.0" mnemonicParsing="false" onAction="#twitterAccount" prefHeight="55.0" prefWidth="200.0" stylesheets="@Hello-view.css" text="Twitter Account">
                      <font>
-                        <Font name="Tiro Tamil" size="16.0" />
+                        <Font name="Verdana" size="16.0" />
                      </font></Button>
                   <Button fx:id="btButton" minHeight="45.0" mnemonicParsing="false" onAction="#button" prefHeight="55.0" prefWidth="200.0" stylesheets="@Hello-view.css" text="Button">
                      <font>
-                        <Font name="Tiro Tamil" size="16.0" />
+                        <Font name="Verdana" size="16.0" />
                      </font></Button>
                </children>
             </VBox>
