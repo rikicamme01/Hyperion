@@ -6,9 +6,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
+import java.io.File;
+import java.net.URI;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -68,14 +73,15 @@ public class NRicercaController implements Initializable {
 
     private String[] località = {"Belluno", "Padova", "Rovigo", "Treviso", "Venezia", "Verona", "Vicenza"};
     private String[] lingue = {"Italian", "English", "French", "German", "Spanish"};
-    StringBuilder query = new StringBuilder();
-
+    FileChooser fileChooser = new FileChooser();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         twitterTemplate.setOpacity(0);
+        btSalvaCome.setVisible(false);
         num_tweet = 3;
         num_reply = 50;
         dtf = new SimpleDateFormat("HH:mm · MMM dd, yyyy");
+
         localitàG1.getItems().addAll(località);
         linguaG1.getItems().addAll(lingue);
 
@@ -95,17 +101,21 @@ public class NRicercaController implements Initializable {
 
 
     public void cerca(ActionEvent actionEvent) {
+        StringBuilder query = new StringBuilder();
+        btSalvaCome.setVisible(true);
         twitterTemplate.setOpacity(1);
         Date date = new Date();
         lbOrarioTemplate.setText(dtf.format(date));
         num_tweet++;
         num_reply++;
         if(num_tweet < 5){
-            lbTemplate.setText("Sono stai trovati solo " + num_tweet +"Tweet.\nProva a modificare i filtri");
+            lbTemplate.setText("Sono stai trovati solo " + num_tweet +" Tweet.\nProva a modificare i filtri");
         }
         else {
             lbTemplate.setText("Sono stati trovati " + num_tweet + " Tweet\ne " + num_reply + " commenti");
         }
+
+
         String[] paroleChiave = {keyword2G1.getText(), keyword3G1.getText(), keyword4G1.getText(), keyword5G1.getText(), keyword6G1.getText() };
         query.append(keyword1G1.getText());
         for (String kw: paroleChiave) {
@@ -116,7 +126,13 @@ public class NRicercaController implements Initializable {
         System.out.println(query);
     }
 
-    public void salvaCome(ActionEvent actionEvent) {
+   public void salvaCome(ActionEvent event) {
+        String formatDateFrom = fromG1.getValue().format(DateTimeFormatter.ofPattern("dd"));
+       String formatDateTo = toG1.getValue().format(DateTimeFormatter.ofPattern("dd"));
+        String nomeExcel = "Calcolo_Output_" + formatDateFrom + "-" + formatDateTo;
+      fileChooser.setTitle("Salva query");
+      fileChooser.setInitialFileName(nomeExcel);
+      fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Foglio Excel", "*.xlsx"));
     }
 
 
@@ -125,6 +141,7 @@ public class NRicercaController implements Initializable {
         utente2G1.setVisible(true);
         btLessUtenteG1.setVisible(true);
         btOrUtenteG1.setText("OR");
+        btOrUtenteG1.setStyle("-fx-background-color: white ");
 
     }
 
@@ -137,21 +154,21 @@ public class NRicercaController implements Initializable {
 
     public void keyword1G1(ActionEvent actionEvent) {
         btKeyword1G1.setText("or");
-        btKeyword1G1.setStyle("-fx-background-color:  #55ACEE");
+        btKeyword1G1.setStyle("-fx-background-color:  white");
         keyword2G1.setVisible(true);
         btKeyword2G1.setVisible(true);
     }
 
     public void keyword2G1(ActionEvent actionEvent) {
         btKeyword2G1.setText("or");
-        btKeyword2G1.setStyle("-fx-background-color:  #55ACEE");
+        btKeyword2G1.setStyle("-fx-background-color:  white");
         keyword3G1.setVisible(true);
         btKeyword3G1.setVisible(true);
     }
 
     public void keyword3G1(ActionEvent actionEvent) {
         btKeyword3G1.setText("or");
-        btKeyword3G1.setStyle("-fx-background-color:  #55ACEE");
+        btKeyword3G1.setStyle("-fx-background-color:  white");
         keyword4G1.setVisible(true);
         btKeyword4G1.setVisible(true);
     }
@@ -159,14 +176,14 @@ public class NRicercaController implements Initializable {
 
     public void keyword4G1(ActionEvent actionEvent) {
         btKeyword4G1.setText("or");
-        btKeyword4G1.setStyle("-fx-background-color:  #55ACEE");
+        btKeyword4G1.setStyle("-fx-background-color:  white");
         keyword5G1.setVisible(true);
         btKeyword5G1.setVisible(true);
     }
 
     public void keyword5G1(ActionEvent actionEvent) {
         btKeyword5G1.setText("or");
-        btKeyword5G1.setStyle("-fx-background-color:  #55ACEE");
+        btKeyword5G1.setStyle("-fx-background-color:  white");
         keyword6G1.setVisible(true);
     }
 }

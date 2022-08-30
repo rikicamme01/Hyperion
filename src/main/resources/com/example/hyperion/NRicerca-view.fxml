@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -18,17 +19,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hyperion.NRicercaController">
+<AnchorPane prefHeight="788.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hyperion.NRicercaController">
    <children>
-      <Button fx:id="btCerca" layoutX="610.0" layoutY="603.0" mnemonicParsing="false" onAction="#cerca" prefHeight="78.0" prefWidth="203.0" text="Cerca">
+      <Button fx:id="btCerca" layoutX="836.0" layoutY="214.0" mnemonicParsing="false" onAction="#cerca" prefHeight="78.0" prefWidth="203.0" text="Cerca" AnchorPane.leftAnchor="836.0">
          <font>
             <Font name="Verdana Italic" size="22.0" />
          </font></Button>
-      <Button fx:id="btSalvaCome" layoutX="853.0" layoutY="605.0" mnemonicParsing="false" onAction="#salvaCome" prefHeight="78.0" prefWidth="241.0" text="Salva come Excel">
+      <Button fx:id="btSalvaCome" layoutX="822.0" layoutY="350.0" mnemonicParsing="false" onAction="#salvaCome" prefHeight="78.0" prefWidth="241.0" text="Salva come Excel" AnchorPane.leftAnchor="822.0">
          <font>
             <Font name="Verdana Italic" size="22.0" />
          </font></Button>
-      <Pane fx:id="twitterTemplate" layoutX="76.0" layoutY="529.0" prefHeight="243.0" prefWidth="429.0" stylesheets="@Hello-view.css" AnchorPane.topAnchor="529.0">
+      <Pane fx:id="twitterTemplate" layoutX="210.0" layoutY="523.0" prefHeight="232.0" prefWidth="429.0" stylesheets="@Hello-view.css" AnchorPane.topAnchor="523.0">
          <children>
             <ImageView fitHeight="256.0" fitWidth="418.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -96,37 +97,39 @@
             </Label>
          </children>
       </Pane>
-      <Label alignment="CENTER" layoutX="-1.0" prefHeight="46.0" prefWidth="1202.0" text="NUOVA RICERCA" textFill="#16202a">
+      <Label alignment="CENTER" layoutX="-1.0" prefHeight="46.0" prefWidth="1097.0" text="NUOVA RICERCA" textFill="#16202a">
          <font>
             <Font name="Verdana Bold" size="35.0" />
          </font>
       </Label>
-      <Label layoutX="-1.0" layoutY="31.0" prefHeight="64.0" prefWidth="1200.0" text="Imposta i filtri che desideri usare nella ricerca" AnchorPane.leftAnchor="15.0">
+      <Label layoutX="-1.0" layoutY="31.0" prefHeight="64.0" prefWidth="1062.0" text="Imposta i filtri che desideri usare nella ricerca" AnchorPane.leftAnchor="15.0">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <HBox layoutX="34.0" layoutY="86.0" prefHeight="417.0" prefWidth="1160.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+      <HBox layoutX="45.0" layoutY="85.0" prefHeight="414.0" prefWidth="750.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="309.0">
          <children>
-            <Pane prefHeight="417.0" prefWidth="573.0" style="-fx-background-color: #55ACEE;">
+            <Pane prefHeight="447.0" prefWidth="1267.0" style="-fx-border-color: #16202a; -fx-border-width: 2 2 2 2;">
                <children>
-                  <VBox layoutY="-1.0" prefHeight="422.0" prefWidth="565.0">
+                  <VBox layoutY="-1.0" prefHeight="423.0" prefWidth="750.0">
                      <children>
-                        <HBox prefHeight="84.0" prefWidth="565.0">
+                        <HBox prefHeight="84.0" prefWidth="713.0">
                            <children>
-                              <Label alignment="CENTER" prefHeight="81.0" prefWidth="97.0" text="Parole chiave:">
+                              <Label alignment="CENTER" prefHeight="81.0" prefWidth="191.0" text="Parole chiave:">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <GridPane prefHeight="79.0" prefWidth="467.0">
+                              <GridPane prefHeight="79.0" prefWidth="696.0">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="117.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="55.59501647949219" minWidth="0.0" prefWidth="44.809967041015625" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.60748291015625" minWidth="10.0" prefWidth="102.19003295898438" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.7437744140625" minWidth="10.0" prefWidth="40.512451171875" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.34732055664062" minWidth="10.0" prefWidth="107.987548828125" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="74.59500122070312" minWidth="10.0" prefWidth="42.028839111328125" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="55.59501647949219" minWidth="0.0" prefWidth="37.63525390625" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.5" minWidth="10.0" prefWidth="114.8790283203125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.7437744140625" minWidth="0.0" prefWidth="33.8905029296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.66925048828125" minWidth="10.0" prefWidth="115.9764404296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.80096435546875" minWidth="7.065673828125" prefWidth="39.4193115234375" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.6185302734375" minWidth="10.0" prefWidth="115.94287109375" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.272705078125" minWidth="10.0" prefWidth="115.55712890625" />
                                 </columnConstraints>
                                 <rowConstraints>
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -136,34 +139,58 @@
                                     <TextField fx:id="keyword1G1" prefHeight="30.0" prefWidth="110.0" promptText="Guerra" />
                                     <Button fx:id="btKeyword1G1" mnemonicParsing="false" onAction="#keyword1G1" prefHeight="26.0" prefWidth="36.0" text="+" GridPane.columnIndex="1">
                                        <GridPane.margin>
-                                          <Insets left="5.0" />
+                                          <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Button>
                                     <TextField fx:id="keyword2G1" prefHeight="30.0" prefWidth="110.0" promptText="Ucraina" GridPane.columnIndex="2">
                                        <GridPane.margin>
-                                          <Insets left="5.0" />
+                                          <Insets />
                                        </GridPane.margin>
                                     </TextField>
-                                    <Button fx:id="btKeyword2G1" mnemonicParsing="false" onAction="#keyword2G1" prefHeight="26.0" prefWidth="36.0" text="+" GridPane.columnIndex="3">
+                                    <Button fx:id="btKeyword2G1" mnemonicParsing="false" onAction="#keyword2G1" prefHeight="26.0" prefWidth="30.5" text="+" GridPane.columnIndex="3">
                                        <GridPane.margin>
-                                          <Insets left="5.0" />
+                                          <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Button>
                                     <TextField fx:id="keyword3G1" prefHeight="30.0" prefWidth="110.0" promptText="Putin" GridPane.columnIndex="4">
                                        <GridPane.margin>
-                                          <Insets left="5.0" />
+                                          <Insets />
                                        </GridPane.margin>
                                     </TextField>
-                                    <Button fx:id="btKeyword3G1" mnemonicParsing="false" onAction="#keyword3G1" prefHeight="26.0" prefWidth="36.0" text="+" GridPane.columnIndex="5">
+                                    <Button fx:id="btKeyword3G1" mnemonicParsing="false" onAction="#keyword3G1" prefHeight="26.0" prefWidth="30.5" text="+" GridPane.columnIndex="5">
                                        <GridPane.margin>
-                                          <Insets left="5.0" />
+                                          <Insets left="5.0" right="5.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <TextField fx:id="keyword4G1" prefHeight="30.0" prefWidth="110.0" promptText="Russia" GridPane.rowIndex="1" />
-                                    <Button fx:id="btKeyword4G1" mnemonicParsing="false" onAction="#keyword4G1" prefHeight="26.0" prefWidth="36.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <TextField fx:id="keyword5G1" prefHeight="30.0" prefWidth="110.0" promptText="Gas" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <Button fx:id="btKeyword5G1" mnemonicParsing="false" onAction="#keyword5G1" prefHeight="26.0" prefWidth="36.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                    <TextField fx:id="keyword6G1" prefHeight="30.0" prefWidth="110.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                    <TextField fx:id="keyword4G1" prefHeight="30.0" prefWidth="110.0" promptText="Russia" GridPane.columnIndex="6" />
+                                    <Button fx:id="btKeyword4G1" mnemonicParsing="false" onAction="#keyword4G1" prefHeight="26.0" prefWidth="30.5" text="+" GridPane.columnIndex="7">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></Button>
+                                    <TextField fx:id="keyword5G1" prefHeight="30.0" prefWidth="110.0" promptText="Gas" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin></TextField>
+                                    <Button fx:id="btKeyword5G1" mnemonicParsing="false" onAction="#keyword5G1" prefHeight="26.0" prefWidth="36.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin></Button>
+                                    <TextField fx:id="keyword6G1" prefHeight="30.0" prefWidth="110.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin></TextField>
+                                    <Button fx:id="btKeyword5G11" layoutX="132.0" layoutY="57.0" mnemonicParsing="false" onAction="#keyword5G1" prefHeight="26.0" prefWidth="30.5" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <TextField fx:id="keyword6G11" layoutX="181.0" layoutY="55.0" prefHeight="30.0" prefWidth="110.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                    <TextField fx:id="keyword6G111" layoutX="315.0" layoutY="55.0" prefHeight="30.0" prefWidth="110.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                    <Button fx:id="btKeyword3G11" layoutX="432.0" layoutY="17.0" mnemonicParsing="false" onAction="#keyword3G1" prefHeight="26.0" prefWidth="30.5" text="+" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </Button>
                                  </children>
                                  <HBox.margin>
                                     <Insets left="6.0" top="5.0" />
@@ -214,7 +241,7 @@
                               </ChoiceBox>
                            </children>
                         </HBox>
-                        <HBox prefHeight="66.0" prefWidth="608.0">
+                        <HBox prefHeight="66.0" prefWidth="565.0">
                            <children>
                               <Label alignment="CENTER" prefHeight="72.0" prefWidth="45.0" text="Da">
                                  <font>
@@ -241,7 +268,39 @@
                               </DatePicker>
                            </children>
                         </HBox>
-                        <HBox prefHeight="66.0" prefWidth="615.0">
+                        <HBox prefHeight="81.0" prefWidth="565.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="81.0" prefWidth="91.0" text="Località &#10;Tweet" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="localitàG1" prefHeight="26.0" prefWidth="113.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" top="25.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <Label alignment="CENTER" prefHeight="81.0" prefWidth="92.0" text="Località &#10;Commenti">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox prefHeight="26.0" prefWidth="113.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" top="25.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <CheckBox mnemonicParsing="false" prefHeight="81.0" prefWidth="143.0" text="dividi per province" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="60.0" prefWidth="565.0">
                            <children>
                               <Label alignment="CENTER" prefHeight="75.0" prefWidth="104.0" text="Max Tweet">
                                  <font>
@@ -268,32 +327,10 @@
                               </Slider>
                            </children>
                         </HBox>
-                        <HBox prefHeight="60.0" prefWidth="614.0">
-                           <children>
-                              <Label alignment="CENTER" prefHeight="78.0" prefWidth="73.0" text="Località:">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <ChoiceBox fx:id="localitàG1" prefHeight="26.0" prefWidth="113.0">
-                                 <HBox.margin>
-                                    <Insets left="4.0" top="20.0" />
-                                 </HBox.margin>
-                              </ChoiceBox>
-                           </children>
-                        </HBox>
                      </children>
                   </VBox>
                </children>
             </Pane>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="94.0" style="-fx-background-radius: 40;" text="Aggiungi gruppo" textAlignment="CENTER" wrapText="true">
-               <HBox.margin>
-                  <Insets top="150.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
             <Pane prefHeight="417.0" prefWidth="518.0" />
          </children>
       </HBox>
